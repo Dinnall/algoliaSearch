@@ -23,25 +23,5 @@ helper.search();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   console.log("ready")
 });
