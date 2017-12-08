@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
 var client = algoliasearch(application_ID, api_KEY);
 var helper = algoliasearchHelper(client, index_name);
 
+// var PARAMS = {
+//     hitsPerPage: 3,
+//     facets: ['type'],
+//  }
+    
 
 helper.on('result', function(content) {
   renderHits(content);
@@ -15,8 +20,17 @@ helper.on('result', function(content) {
 
 
 function renderHits(content) {
-  $('#container').html(JSON.stringify(content, null, 2));
+  $('#container').html(function() {
+    return $.map(content.hits, function(hit) {
+      return '<li>' + hit._highlightResult.name.value + '</li>';
+    });
+  });
 }
+
+$('#search-box').on('keyup', function() {
+  helper.setQuery($(this).val())
+        .search();
+});
 
 
 helper.search();
