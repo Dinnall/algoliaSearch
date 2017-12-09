@@ -24,7 +24,6 @@ body {
 	margin: 208px 215px 114px 520px;
 }
 
-
 .inputArea{
 height: 40px;
 width: 860px;
@@ -37,7 +36,7 @@ border-radius: 5px;
     padding: 231px;
     padding-bottom: 200px;
     box-shadow: 2px 2px #888888;
-    background: white;
+    background: blue;
     margin: -133px 30px 70px 86px;
     height: 300px;
     width: 604px;
@@ -48,6 +47,36 @@ padding-left: 28px;
 margin: -260px 630px 90px 100px;
 }
 
+/*#container{
+  max-width: 150px;
+  width: 100%;
+  float: left;
+  padding: 0 1em;
+  margin: 0;
+  list-style: none;
+  color: blue;
+}
+*/
+
+
+.sideBarFilters{
+padding-right: 240px;
+
+}
+
+.sideBarComponents{
+  margin:-100px;
+
+}
+
+
+.hits-wrapper{
+  padding-left: 400px;
+  margin: 90px;
+  margin-left: 60px;
+  margin-top: -100px;
+  position: absolute;
+}
 
 
 
