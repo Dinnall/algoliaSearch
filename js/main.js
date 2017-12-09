@@ -1,20 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
   
-  var application_ID = 'VJDTO4Y36O';
-  var api_KEY = 'd8c4853d7f3df70f8973f35ad66c1ec8';
-  var index_name = 'restaurants';
+var application_ID = 'VJDTO4Y36O';
+var api_KEY = 'd8c4853d7f3df70f8973f35ad66c1ec8';
+var index_name = 'finalOutput';
   
 
 var client = algoliasearch(application_ID, api_KEY);
 var helper = algoliasearchHelper(client, index_name);
-
-
-
 var algolia = algoliasearch(application_ID, api_KEY);
 
 
-var helper = algoliasearchHelper(algolia, 'restaurants', {
-  facets: ['type', 'cuisine', 'rating'],
+var helper = algoliasearchHelper(algolia, 'finalOutput', {
+  facets: ['cuisine', 'rating'],
   hitsPerPage: 3,
   maxValuesPerFacet: 5,
   getRankingInfo: true
