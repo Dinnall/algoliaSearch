@@ -1,0 +1,32 @@
+[
+    {
+        "objectID;food_type;stars_count;reviews_count;neighborhood;phone_number;price_range;dining_style": "963;Seafood;4.3;2451;SOMA;(415) 777-0277;$31 to $50;Fine Dining",
+        "null": [
+            " International;4.3;885;Emeryville;(510) 653-3400;$31 to $50;Casual Dining"
+        ],
+        "objectID": 25840,
+        "name": "SASA",
+        "address": "13120 Shaker Square",
+        "area": "Cleveland / Akron / Canton",
+        "city": "Cleveland",
+        "country": "US",
+        "image_url": "https://www.opentable.com/img/restimages/25840.jpg",
+        "mobile_reserve_url": "http://mobile.opentable.com/opentable/?restId=25840",
+        "payment_options": [
+            "AMEX",
+            "Diners Club",
+            "Discover",
+            "MasterCard",
+            "Visa"
+        ],
+        "phone": "2167671111",
+        "postal_code": "44120",
+        "price": 2,
+        "reserve_url": "http://www.opentable.com/single.aspx?rid=25840",
+        "state": "OH",
+        "_geoloc": {
+            "lat": 41.483445,
+            "lng": -81.591102
+        }
+    }
+]

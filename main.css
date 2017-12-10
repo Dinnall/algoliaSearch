@@ -36,9 +36,9 @@ border-radius: 5px;
     padding: 231px;
     padding-bottom: 200px;
     box-shadow: 2px 2px #888888;
-    background: blue;
+    background: white;
     margin: -133px 30px 70px 86px;
-    height: 300px;
+    height: 200px;
     width: 604px;
 }
 
@@ -47,20 +47,15 @@ padding-left: 28px;
 margin: -260px 630px 90px 100px;
 }
 
-/*#container{
-  max-width: 150px;
-  width: 100%;
-  float: left;
-  padding: 0 1em;
-  margin: 0;
-  list-style: none;
-  color: blue;
-}
-*/
+
 
 
 .sideBarFilters{
-padding-right: 240px;
+  padding-right: 240px;
+  padding: 6px 0;
+  border-bottom: 1px solid #ccc;
+  list-style-type:none;
+  margin-left: 0;
 
 }
 
@@ -69,13 +64,18 @@ padding-right: 240px;
 
 }
 
+/*.attribute{
+    height: 80px;
+}*/
+
 
 .hits-wrapper{
   padding-left: 400px;
   margin: 90px;
   margin-left: 60px;
-  margin-top: -100px;
+  margin-top: -200px;
   position: absolute;
+  padding-top: -200px;
 }
 
 

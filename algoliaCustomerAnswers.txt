@@ -1,0 +1,80 @@
+ANSWER TO QUESTION 1:
+
+Hi George,
+
+No worries! I have no problem with helping you understanding those concepts.
+
+Indexing: In regards to algolia, indexing is importing the data you would your users to search through. For example,if you owned a movie rental store your index might be information about a list of movies. Indexing can be accomplished in a few different ways. Most recommended is import existing data via Algolia API client.
+
+Records :  Similar to indexing,but records are the information you indexed/imported. From my example earlier we indexed our movie list data, but records is the information about each show.
+
+Example:  
+
+  {
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "image": "https://image.tmdb.org/t/p/w154/9O7gLzmreU0nGkIB6K3BsJbzvNv.jpg",
+    "rating": 5,
+    "genre": [
+      "Drama",
+      "Crime"
+    ],
+    "objectID": "439817390"
+  }
+
+Note: Each movie recoard will be assigned a unique ID to separate your movies.
+
+Lastly,custom ranking truly depending on the type of relevent information you like users to see first. Using the movie store example again, in this instance a custom ranking of featured product or higher or lower priced ticketed ides can be useful.
+
+Another example, you might consider adding is showing if items are availability to ensure in stock items are ranked highest.
+
+If you have any more questions we are here to aassit. Providing more claification is no problem at all.
+
+Keep us is the loop on your progress. 
+Happy coding George!
+
+-Michael
+
+
+ANSWER TO QUESTION 2:
+
+Hi Matt,
+
+We welcome your feedback. We strive to improve and one way to do that is with clients feedback. We are sorry to hear that this is inconvenient to you. Currently have those additional steps help users from accidentally deleting indexs they might need.  
+
+-Michael
+
+
+
+ANSWER TO QUESTION 3:
+
+
+First off thank you for choosing Algolia for your searching needs Leo! 
+Integrating algolia with your website is straightforward.
+Implementing Algolia can be broken down into a simple 3-step process:
+
+1. Index your data with us.
+2. Configure any necessary relevance or ranking settings.
+3. Building out your user search interface.
+
+Currently we don’t provide any integration services. But we do provide support and guidance to all our users.
+
+Let us know if you need a specific help with your development Leo.
+
+-Michael
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
