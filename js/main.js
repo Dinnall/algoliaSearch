@@ -16,7 +16,7 @@ var self,
     }
   },
 
-events: function() {
+  events: function() {
 
     client = algoliasearch(settings.applicationID, settings.apiKey);
 
@@ -173,7 +173,6 @@ if (name === 'food_type' || name === 'payment_options') {
 
 
 $(function () {
-  console.log('Ready');
+  console.log('Final App');
   RestaurantSearch.init();
-});)
 });
