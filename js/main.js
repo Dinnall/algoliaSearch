@@ -1,5 +1,5 @@
 var self,
-    settings,
+    settings, 
     client,
     helper,
     RestaurantSearch = {
