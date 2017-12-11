@@ -6,51 +6,78 @@
     <title>Cool places to eat!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
-    <script src="/dist/algoliasearch.jquery.min.js"></script>
-    <script src='https://cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2'></script>
-    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3/dist/algoliasearchLite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch-helper@2.23.0/dist/algoliasearch.helper.min.js"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script  src="js/main.js"></script>
 
  </head>
-  <body>
-       <div class="search-container">
-            <img src="graphics/background_@2X.png" alt="graphicBackground">
-             <div class="searchArea">
-                 <input class="inputArea" rows="3" cols="80" id="search-box" autocomplete="off" placeholder="Search for Restaurants by Name, Cuisine, Location"></input>
-            </div>
-       </div>
+   <body>
 
-      <div class="main-info">
-          <div class="hits-wrapper" id=container>
-                           <h1>Results</h1>
-                         <div id="hits"></div>
-                     </div>
-                  <div id="container"> </div>
+  <main>
+
+    <div class="search-container">
+       <div class="row search-bar">
+        <input id="search-input" type="text" class="form-control" autocomplete="off" placeholder="Search for Restaurants by Name, Cuisine, Location">
+      </div>
+
+      <section class="row results">
+         <div id="facets-list" class="col-md-3 col-sm-4 col-xs-12 search-facets">
+          </div>
+          <div class="col-md-9 col-sm-8 col-xs-12 search-results">
+
+          <div class="processing-info"><span id="total-records">0 results found </span><span id="processing-time" class="small">in 0 seconds</span></div>
+          <div class="divider"></div>
+
+          <div id="results-list"></div>
+
+          <a id="load-more-btn" class="btn btn-default hidden" href="#" role="button">Show more</a>
+
+        </div>
+       </section>
+     </div>
+
+  </main>
+
+<!--   // Templates Working with Hogan or Mustacte might be better but not with the scope of this project //--> 
+
+<script id="result-item-template" type="text/template">
+    <div class="result-item">
+      <div class="result-image">
+        <img src="{{ image }}" alt="{{ name }}">
+      </div>
+      <ul class="result-data">
+        <li class="item-name">{{ name }}</li>
+        <li>
+          <span class="score">{{ rating }} </span>
+          <i class="stars"><span class="star-{{ star }}"></span>
+          </i> ({{ reviews }} reviews)
+        </li>
+        <li>{{ type }} | {{ neighborhood }} | {{ price }}</li>
+      </ul>
+    </div>
+ </script>
 
 
-           <main>
-             
+ <script id="temp-rating-template" type="text/template">
+    <h4 class="facet-name">Rating</h4>
+    <ul class="star-rating">
+      <li class="stars"></li>
+      <li class="stars"><span class="star-10"></span></li>
+      <li class="stars"><span class="star-20"></span></li>
+      <li class="stars"><span class="star-30"></span></li>
+      <li class="stars"><span class="star-40"></span></li>
+      <li class="stars"><span class="star-50"></span></li>
+    </ul>
+  </script>
 
-          <div class="sideBarFilters">
-              <h4 class="sideBarComponents">Rating</h4>
-                 <h4 class="sideBarComponents ">Cuisine/Food Type</h4>
+  <script id="facet-item-template" type="text/template">
+    <li class="{{ class }}">
+      <a data-attribute="{{ attribute }}" data-value="{{ value }}" href="#">{{ value }}<span>{{ count }}</span></a>
+    </li>
+  </script>
+  <script src="js/main.min.js"></script>
 
-
-                <div id="facets"></div>
-
-
-              <div class="sideBarLineBreak" >
-         </div>
-            <hr noshade width="1" size="830">
-           </div>
-
-
-             
-           </main>
-       </div>
-
-
-
- </body>
+  </body>
 </html>
