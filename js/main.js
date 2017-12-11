@@ -8,7 +8,7 @@ var self,
 
     applicationID: 'VJDTO4Y36O',
     apiKey: 'd8c4853d7f3df70f8973f35ad66c1ec8',
-    indexName: 'finalOutput',
+    indexName: 'pythonOutput',
     facetNames: {
       'food_type': 'Cuisine/Food Type',
       'stars_count': 'rating',
@@ -100,6 +100,7 @@ renderHits: function($hits, results) {
 
 var $template = $('#result-item-template');
 var hits = results.hits.map(function renderHit(hit) {
+  console.log("Rendered Hits: ",hit)
     var starRound = hit.stars_count * 10;
 
       return $template.html()
@@ -123,8 +124,10 @@ var hits = results.hits.map(function renderHit(hit) {
   },
 
 
-  renderFacets: function($facets, content) {
-    var $facetTemplate = $('#facet-item-template');
+renderFacets: function($facets, content) {
+  var $facetTemplate = $('#facet-item-template');
+  console.log("Rendered $facets: ",$facets)
+  console.log("Rendered Content:",content)
 
     //  double check Algolia index for facets
     var facets = content.disjunctiveFacets.map(function(facet) {
