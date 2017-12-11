@@ -44,11 +44,6 @@ function searchCallback(content){
   // renderFacets($facets, content);
 }
 
-
-
-
-
-
 const renderHits =($hits, results) =>{
   var hits = results.hits.map(function renderHit(hit){
 
